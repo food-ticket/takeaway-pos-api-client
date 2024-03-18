@@ -1,0 +1,43 @@
+{
+    "name": "foodticket/takeaway-pos-client",
+    "description": "A PHP client to integrate with the Takeaway POS API",
+    "keywords": ["PHP", "Takeaway POS", "Takeaway", "delivery", "api client"],
+    "type": "library",
+    "require": {
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "illuminate/http": "^8.0|^9.0",
+        "illuminate/support": "^8.0|^9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Foodticket\\Takeaway\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rik Morskate",
+            "email": "rik@foodticket.nl"
+        }, {
+            "name": "Henrik Steffensen",
+            "email": "henrik@foodticket.nl"
+        }
+    ],
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Foodticket\\Takeaway\\TakeawayServiceProvider"
+            ]
+        }
+    }
+}
