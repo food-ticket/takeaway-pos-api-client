@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Foodticket\Takeaway\Endpoints;
 
 use Carbon\Carbon;
-use Foodticket\Takeaway\Enums\OrderStatus;
 use Illuminate\Http\Client\RequestException;
 
 trait SetOrderStatus
