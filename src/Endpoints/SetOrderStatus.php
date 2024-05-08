@@ -22,14 +22,14 @@ trait SetOrderStatus
     public function setOrderStatus(
         string $statusUrl,
         string $id,
-        OrderStatus $status,
+        string $status,
         string $key,
         ?Carbon $changedDeliveryTime = null,
         ?string $message = null,
     ) {
         $data = [
             'id' => $id,
-            'status' => $status->value,
+            'status' => $status,
             'key' => $key,
         ];
 
