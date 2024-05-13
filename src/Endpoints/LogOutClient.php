@@ -25,16 +25,10 @@ trait LogOutClient
             'restaurant' => $restaurantId,
         ];
 
-        $response = $this->request()
+        return $this->request()
             ->post(
-                "/logout",
+                '/logout',
                 array_filter($data)
             );
-
-        if ($response->successful()) {
-            return $response->object();
-        }
-
-        $response->throw();
     }
 }

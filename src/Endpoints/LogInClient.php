@@ -19,8 +19,8 @@ trait LogInClient
         string $orderUrl,
         string $aliveUrl,
         string $clientKey,
-        ?string $driverUpdateUrl,
-        ?string $orderCancelledUrl,
+        ?string $driverUpdateUrl = null,
+        ?string $orderCancelledUrl = null,
     ) {
         $data = [
             'apiKey' => config('takeaway.api_key'),
@@ -36,16 +36,10 @@ trait LogInClient
             $data['subscribe']['orderCancelled'] = $orderCancelledUrl;
         }
 
-        $response = $this->request()
+        return $this->request()
             ->post(
-                "/login",
+                '/login',
                 array_filter($data)
             );
-
-        if ($response->successful()) {
-            return $response->object();
-        }
-
-        $response->throw();
     }
 }
