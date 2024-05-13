@@ -41,16 +41,10 @@ trait SetOrderStatus
             $data['text'] = $message;
         }
 
-        $response = $this->request()
+        return $this->request()
             ->post(
                 $statusUrl,
                 array_filter($data)
             );
-
-        if ($response->successful()) {
-            return $response->object();
-        }
-
-        $response->throw();
     }
 }
