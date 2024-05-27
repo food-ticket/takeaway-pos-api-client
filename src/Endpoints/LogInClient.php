@@ -28,7 +28,7 @@ trait LogInClient
             'orderUrl' => $orderUrl,
             'driverUpdateUrl' => $driverUpdateUrl ?? 'https://nodriverupdates',
             'aliveUrl' => $aliveUrl,
-            'version' => config('takeaway.pos_api.version'),
+            'version' => config('takeaway.api_version', '1.3'),
             'clientKey' => $clientKey,
         ];
 

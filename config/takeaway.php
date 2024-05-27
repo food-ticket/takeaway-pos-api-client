@@ -17,6 +17,8 @@ return [
 
     'api_secret' => env('TAKEAWAY_POS_API_SECRET'),
 
+    'api_version' => env('TAKEAWAY_POS_API_VERSION'),
+
     'routes_prefix' => '/takeaway-pos/webhooks',
 
     'routes_middleware' => ['webhooks'],
