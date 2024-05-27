@@ -19,7 +19,7 @@ return [
 
     'api_version' => env('TAKEAWAY_POS_API_VERSION'),
 
-    'routes_prefix' => '/webhooks/takeaway-pos',
+    'routes_prefix' => '/takeaway-pos/webhooks',
 
     'routes_middleware' => ['webhooks'],
 ];
