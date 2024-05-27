@@ -21,7 +21,7 @@ trait LogOutClient
         string $restaurantId,
     ) {
         $data = [
-            'apiKey' => config('services.takeaway.api_key'),
+            'apiKey' => config('takeaway.api_key'),
             'restaurant' => $restaurantId,
         ];
 
