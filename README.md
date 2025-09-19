@@ -6,8 +6,8 @@ This package allows you to easily make requests to the Takeaway POS API.
 
 ## Requirements
 
-- PHP >= 8.1
-- Laravel >= 9.0
+- PHP >= 8.2
+- Laravel >= 11.0
 
 ## Installation
 
